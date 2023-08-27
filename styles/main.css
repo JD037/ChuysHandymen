@@ -1,0 +1,226 @@
+  /* Simple CSS styles */
+  body {
+    
+    
+    font-family: Arial, sans-serif;
+}
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 5px; /* width of the border */
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(184, 20, 20);
+    color: white;
+    padding: 0px 0%;
+    text-align: center;
+    height: 80px;
+    margin: 0;
+}
+
+/* Styling the logo */
+#logo-image {
+    width: 90px; /* Adjust this as per your preference */
+    height: 80px;
+    margin-bottom: 0px;
+    display: block;
+}
+
+/* Styling the navigation links and button */
+.menu-bar {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Adjust this to set space between items */
+    margin: 0;
+}
+
+.menu-bar a, .menu-bar button {
+    text-decoration: none;
+    color: white; /* Or your preferred color for links */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 0;
+}
+
+.menu-bar button {
+    background-color: #333; /* Or your preferred button color */
+    border: none;
+    cursor: pointer;
+}
+
+.menu-bar a:hover, .menu-bar button:hover {
+    background-color: #555; /* Adjust this for hover effect color */
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    z-index: 1000;
+}
+
+#lightbox .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#lightbox img {
+    margin-top: 50px;
+    max-width: 70%;
+    max-height: 80%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-size: 20px;
+    transition: 0.6s;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+}
+
+
+
+/* Example media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    #banner-logo {
+        background-size: 150% 120%;  /* Adjust these values as needed */
+    }
+}
+
+.intro-wrap {
+    background-image: url('../images/workerbanner.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* This will ensure the image covers the entire div */
+    background-repeat: no-repeat; /* This will prevent the image from repeating */
+    background-position: center center; /* This will position the image to the center of the div */
+    position: relative; /* Make sure other elements are positioned relative to this one */
+    height: 75vh;
+    padding-top: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.banner-text {
+    position: absolute;  
+    top: 25%;  /* This can be adjusted to move vertically */
+    left: 3%;  /* This can be adjusted to move horizontally */
+    transform: translateY(-50%);  /* Center the text vertically around its current position */
+    font-size: 85%;
+}
+
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-banner img {
+    width: 100%;
+    max-width: 400px; /* adjust as needed */
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: rgb(184, 20, 20);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+
+.footer-bar {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px; /* adjust based on desired size */
+    height: 24px;
+}
+
+/* For extra flair, you can add hover effects to the social media icons */
+.social-media a:hover {
+    opacity: 0.7;
+}
