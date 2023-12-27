@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/main.css"> <!-- Make sure this path is correct -->
-    <script src="../scripts/gallery.js"></script> <!-- Make sure this path is correct -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
     <title>Chuy's Handymen & Remodeling</title>
 </head>
 <body>
 
     <!-- Header with Logo and Navigation -->
-    <header>
-        <div class="logo">
-            <img src="../images/Logosmall.jpg" alt="Chuy's Handymen Logo" id="logo-image"> <!-- Make sure this path is correct -->
+    <header class="container-fluid bg-transparent">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <img src="../images/homelogo.png" class="img-fluid" alt="Home Logo" style="height: 100px;">
+          </div>
+          <div class="col-6 text-right">
+            <nav>
+              <ul class="nav">
+                <li class="nav-item mr-3"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item mr-3"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <!-- Add more list items for other menu links -->
+              </ul>
+            </nav>
+          </div>
         </div>
-        <nav class="menu-bar">
-            <a href="services.html">Services</a>
-            <a href="about.html">About Us</a>
-            <a href="gallery.html">Gallery</a>
-        </nav>
     </header>
-    
-    
-    
     <!-- Main Content Section -->
-    <main id="home">
+    <main id="home" class="bg-full">
 
     </main>
-
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
@@ -49,16 +52,21 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer-bar">
-        <!-- Social Media Icons -->
-        <div class="social-media">
-            <a href="#"><img src="../images/facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="../images/twitter-icon.png" alt="Twitter"></a>
-            <!-- Add other social media links with icons here -->
-        </div>
-        <!-- Copyright Text -->
-        <p>&copy; 2023 Chuy's Handymen & Remodeling. All rights reserved.</p>
-    </footer>
+<footer class="bg-dark text-white text-center p-3">
+    <!-- Social Media Icons -->
+    <div class="mb-2">
+        <a href="https://facebook.com/profile.php?id=100082297385344" target="_blank">
+            <img src="../images/facebook-icon.png" class="img-fluid" alt="Facebook" style="height: 30px;">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="../images/twitter-icon.png" class="img-fluid" alt="Twitter" style="height: 30px;">
+        </a>
+        <!-- Add other social media links with icons here -->
+    </div>
+    <!-- Copyright Text -->
+    <p>&copy; 2023 Chuy's Handymen & Remodeling. All rights reserved.</p>
+</footer>
+
 
 </body>
 </html>

@@ -1,176 +1,42 @@
-/* Reset margin and padding for all elements */
-* {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set font for the whole body */
-body {
-    font-family: 'Arial', sans-serif;
-}
-
-/* Header styles */
-header {
-    background: #333; /* Dark background for the header */
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Logo styles */
-.logo img {
-    height: 60px; /* Set a fixed height for your logo */
-    margin-left: 20px; /* Add margin to separate from the edge of the browser */
-}
-
-/* Navigation styles */
-nav.menu-bar {
-    margin-right: 20px;
-}
-
-nav.menu-bar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-nav.menu-bar a:hover {
-    color: #f0e68c; /* Highlight color on hover */
-}
-
-/* Banner styles */
-#banner-logo {
-    background-image: url('../images/banner.jpg'); /* Replace with your banner image */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0; /* Large padding for a big banner */
-    text-align: center;
-}
-
-/* Title styles in the banner */
-.heading-jumbo {
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.heading-jumbo-small {
-    font-size: 1.5rem;
-}
-
-.name-text {
-    color: #f0e68c;
-}
-
-/* Main content styles */
-main#home {
-    padding: 20px;
-    background-image: url('../images/bgimg1.jpg'); /* Set the background image */
-    background-size: contain; /* Cover the entire area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    min-height: 500px; /* Set a minimum height for the area */
-}
-
-/* Contact section styles */
-#contact {
-    background-image: url('../images/altlogo.jpg'); /* Adjust the path as needed */
-    background-size: 100% auto; /* This will ensure the image fits width-wise */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px; /* Adjust padding as needed */
-    min-height: 400px; /* Adjust the height as needed */
-    color: #fff; /* White text for visibility */
-}
-
-/* Contact form wrapper styles for transparency */
-.contact-wrapper {
-    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
-    padding: 20px;
-    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .bg-transparent {
+    background: none;
+  }
+  
+  .header-container {
+    position: absolute;
     width: 100%;
-    max-width: 600px; /* Max width of the form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Adjust form input styles for better appearance */
-#contactUsForm input,
-#contactUsForm textarea {
-    background: rgba(0, 0, 0, 0.1); /* Slightly darker background for the inputs */
-    border: 1px solid #ccc; /* Light border for inputs */
-    color: #000; /* Dark text for readability */
-}
-
-/* ... other styles ... */
-
-
-#contactUsForm {
-    margin-top: 20px;
-}
-
-#contactUsForm label {
-    display: block; /* Make labels take up their own line */
-    margin-bottom: 5px;
-}
-
-#contactUsForm input,
-#contactUsForm textarea {
-    width: 100%; /* Make inputs and textarea take full width */
-    padding: 10px;
-    margin-bottom: 20px; /* Add space between fields */
-    border: 1px solid #ddd;
-}
-
-#contactUsForm button {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-#contactUsForm button:hover {
-    background: #555;
-}
-
-/* Footer styles */
-footer.footer-bar {
-    background: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-footer.footer-bar .social-media a img {
+    z-index: 1000;
+  }
+  
+  .bg-full {
+    min-height: 100%;
+    background: url('../images/bgimg1.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Sticky footer styles */
+  footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Contact form styles */
+  #contact {
+    background: #fff; /* Or any color you want */
+    padding: 2rem 0;
+  }
+  
+  /* Adjust your social media icon sizes here */
+  .social-media img {
     height: 30px;
-    margin: 0 10px;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    .logo img {
-        margin: 0 auto; /* Center the logo */
-    }
-
-    nav.menu-bar {
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    #contact {
-        background-size: cover; /* Full cover on smaller screens */
-    }
-}
-
+  }
+  
+  /* Rest of your styles */
+  
