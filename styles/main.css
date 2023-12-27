@@ -1,42 +1,53 @@
 body, html {
     height: 100%;
-    margin: 0;
-  }
-  
-  .bg-transparent {
-    background: none;
+    body {
+      margin: 0;
+      padding-top: 10px; /* Adjust this to the height of your header */
+      background: url('../images/paintwall.jpg') no-repeat center center fixed;
+      background-size: cover;
+      
+    }
   }
   
   .header-container {
-    position: absolute;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1030; /* High enough to stay above other elements */
   }
   
-  .bg-full {
-    min-height: 100%;
-    background: url('../images/bgimg1.jpg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-  }
+
+  #restorationCarousel {
+    border: 5px solid rgb(156, 12, 12); /* Adjust the border size and color as needed */
+    border-radius: 15px; /* Adjust for rounded corners */
+    width: 100%; /* Adjust width as needed */
+    margin: auto; /* This will center the carousel */
+}
+
+.carousel-item img {
+    width: 100%; /* This will make all images the same width as their container */
+    object-fit: cover; /* This will cover the area without stretching images */
+    height: 700px; /* Adjust height as needed to make all images the same size */
+}
+
+  
+  
   
   /* Sticky footer styles */
   footer {
-    position: sticky;
-    bottom: 0;
+    position: relative;
+    bottom: 10;
     width: 100%;
   }
   
   /* Contact form styles */
   #contact {
-    background: #fff; /* Or any color you want */
-    padding: 2rem 0;
+    width: 100%;
   }
   
   /* Adjust your social media icon sizes here */
   .social-media img {
     height: 30px;
   }
-  
-  /* Rest of your styles */
   
