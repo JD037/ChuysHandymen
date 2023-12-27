@@ -31,7 +31,11 @@ body, html {
     height: 700px; /* Adjust height as needed to make all images the same size */
 }
 
-  
+.rounded-circle {
+  border: 2px solid #fff; /* Optional: change #fff to any color for the border */
+  object-fit: cover;
+}
+
   
   
   /* Sticky footer styles */
