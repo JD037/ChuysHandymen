@@ -1,226 +1,176 @@
-  /* Simple CSS styles */
-  body {
-    
-    
-    font-family: Arial, sans-serif;
-}
-
-body::before, body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 5px; /* width of the border */
-    background-color: rgb(0, 0, 0);
-    z-index: 1000;
-}
-
-body::before {
-    left: 0;
-}
-
-body::after {
-    right: 0;
-}
-
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(184, 20, 20);
-    color: white;
-    padding: 0px 0%;
-    text-align: center;
-    height: 80px;
+/* Reset margin and padding for all elements */
+* {
     margin: 0;
-}
-
-/* Styling the logo */
-#logo-image {
-    width: 90px; /* Adjust this as per your preference */
-    height: 80px;
-    margin-bottom: 0px;
-    display: block;
-}
-
-/* Styling the navigation links and button */
-.menu-bar {
-    display: flex;
-    align-items: center;
-    gap: 0px; /* Adjust this to set space between items */
-    margin: 0;
-}
-
-.menu-bar a, .menu-bar button {
-    text-decoration: none;
-    color: white; /* Or your preferred color for links */
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin: 0;
-}
-
-.menu-bar button {
-    background-color: #333; /* Or your preferred button color */
-    border: none;
-    cursor: pointer;
-}
-
-.menu-bar a:hover, .menu-bar button:hover {
-    background-color: #555; /* Adjust this for hover effect color */
-}
-
-nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-}
-
-#lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-    text-align: center;
-    z-index: 1000;
-}
-
-#lightbox .close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-#lightbox img {
-    margin-top: 50px;
-    max-width: 70%;
-    max-height: 80%;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-size: 20px;
-    transition: 0.6s;
-    border-radius: 0 3px 3px 0;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(255,255,255,0.8);
-    color: black;
-}
-
-
-
-/* Example media query for screens smaller than 768px */
-@media (max-width: 768px) {
-    #banner-logo {
-        background-size: 150% 120%;  /* Adjust these values as needed */
-    }
-}
-
-.intro-wrap {
-    background-image: url('../images/workerbanner.jpg'); /* Replace with the path to your image */
-    background-size: cover; /* This will ensure the image covers the entire div */
-    background-repeat: no-repeat; /* This will prevent the image from repeating */
-    background-position: center center; /* This will position the image to the center of the div */
-    position: relative; /* Make sure other elements are positioned relative to this one */
-    height: 75vh;
-    padding-top: 25px;
-    color: rgb(0, 0, 0);
-}
-
-.banner-text {
-    position: absolute;  
-    top: 25%;  /* This can be adjusted to move vertically */
-    left: 3%;  /* This can be adjusted to move horizontally */
-    transform: translateY(-50%);  /* Center the text vertically around its current position */
-    font-size: 85%;
-}
-
-
-.contact-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.contact-banner img {
-    width: 100%;
-    max-width: 400px; /* adjust as needed */
-}
-
-.contact-form {
-    flex: 1;
-}
-
-.contact-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
+    padding: 0;
     box-sizing: border-box;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-.contact-form button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: rgb(184, 20, 20);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Set font for the whole body */
+body {
+    font-family: 'Arial', sans-serif;
 }
 
-.contact-form button:hover {
-    background-color: #555;
-}
-
-
-.footer-bar {
-    background-color: black;
+/* Header styles */
+header {
+    background: #333; /* Dark background for the header */
     color: white;
     padding: 10px 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-.social-media a {
+/* Logo styles */
+.logo img {
+    height: 60px; /* Set a fixed height for your logo */
+    margin-left: 20px; /* Add margin to separate from the edge of the browser */
+}
+
+/* Navigation styles */
+nav.menu-bar {
+    margin-right: 20px;
+}
+
+nav.menu-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav.menu-bar a:hover {
+    color: #f0e68c; /* Highlight color on hover */
+}
+
+/* Banner styles */
+#banner-logo {
+    background-image: url('../images/banner.jpg'); /* Replace with your banner image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; /* Large padding for a big banner */
+    text-align: center;
+}
+
+/* Title styles in the banner */
+.heading-jumbo {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.heading-jumbo-small {
+    font-size: 1.5rem;
+}
+
+.name-text {
+    color: #f0e68c;
+}
+
+/* Main content styles */
+main#home {
+    padding: 20px;
+    background-image: url('../images/bgimg1.jpg'); /* Set the background image */
+    background-size: contain; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    min-height: 500px; /* Set a minimum height for the area */
+}
+
+/* Contact section styles */
+#contact {
+    background-image: url('../images/altlogo.jpg'); /* Adjust the path as needed */
+    background-size: 100% auto; /* This will ensure the image fits width-wise */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Adjust padding as needed */
+    min-height: 400px; /* Adjust the height as needed */
+    color: #fff; /* White text for visibility */
+}
+
+/* Contact form wrapper styles for transparency */
+.contact-wrapper {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    width: 100%;
+    max-width: 600px; /* Max width of the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Adjust form input styles for better appearance */
+#contactUsForm input,
+#contactUsForm textarea {
+    background: rgba(0, 0, 0, 0.1); /* Slightly darker background for the inputs */
+    border: 1px solid #ccc; /* Light border for inputs */
+    color: #000; /* Dark text for readability */
+}
+
+/* ... other styles ... */
+
+
+#contactUsForm {
+    margin-top: 20px;
+}
+
+#contactUsForm label {
+    display: block; /* Make labels take up their own line */
+    margin-bottom: 5px;
+}
+
+#contactUsForm input,
+#contactUsForm textarea {
+    width: 100%; /* Make inputs and textarea take full width */
+    padding: 10px;
+    margin-bottom: 20px; /* Add space between fields */
+    border: 1px solid #ddd;
+}
+
+#contactUsForm button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#contactUsForm button:hover {
+    background: #555;
+}
+
+/* Footer styles */
+footer.footer-bar {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer.footer-bar .social-media a img {
+    height: 30px;
     margin: 0 10px;
 }
 
-.social-media img {
-    width: 24px; /* adjust based on desired size */
-    height: 24px;
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo img {
+        margin: 0 auto; /* Center the logo */
+    }
+
+    nav.menu-bar {
+        margin: 10px 0;
+    }
 }
 
-/* For extra flair, you can add hover effects to the social media icons */
-.social-media a:hover {
-    opacity: 0.7;
+@media (max-width: 768px) {
+    #contact {
+        background-size: cover; /* Full cover on smaller screens */
+    }
 }
+
